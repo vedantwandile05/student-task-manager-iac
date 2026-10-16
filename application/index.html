@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Student Task Manager</title>
+  <link rel="stylesheet" href="/style.css" />
+</head>
+<body>
+  <header>
+    <h1 id="app-title">Student Task Manager</h1>
+    <span id="env-badge" class="badge"></span>
+  </header>
+
+  <main>
+    <section class="card">
+      <h2>Add Task</h2>
+      <div class="form-row">
+        <input id="title" type="text" placeholder="Task title, e.g. Submit Cloud Computing Assignment" maxlength="200" />
+        <select id="priority">
+          <option>High</option>
+          <option selected>Medium</option>
+          <option>Low</option>
+        </select>
+        <select id="status">
+          <option selected>Pending</option>
+          <option>In Progress</option>
+          <option>Completed</option>
+        </select>
+        <button id="add-btn">Add Task</button>
+      </div>
+      <p id="message" class="message"></p>
+    </section>
+
+    <section class="stats" id="stats"></section>
+
+    <section class="card">
+      <div class="toolbar">
+        <h2>Tasks</h2>
+        <input id="search" type="search" placeholder="Search tasks..." />
+        <select id="filter">
+          <option value="">All statuses</option>
+          <option>Pending</option>
+          <option>In Progress</option>
+          <option>Completed</option>
+        </select>
+      </div>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr><th>ID</th><th>Task</th><th>Priority</th><th>Status</th><th>Created</th><th>Actions</th></tr>
+          </thead>
+          <tbody id="task-body"></tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+
+  <script src="/script.js"></script>
+</body>
+</html>
