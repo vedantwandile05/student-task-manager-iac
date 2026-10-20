@@ -1,0 +1,6 @@
+account_id        = "2088f365dd10c421092d67a3d2da357f"
+worker_name       = "student-task-manager"
+kv_namespace_name = "student_tasks"
+environment       = "dev"
+app_title         = "Student Task Manager"
+workers_subdomain = "vedantwandile5725"
