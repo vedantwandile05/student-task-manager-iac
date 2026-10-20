@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Student Task Manager</title>
+  <link rel="stylesheet" href="/style.css" />
+</head>
+<body>
+  <header>
+    <h1 id="app-title">Student Task Manager</h1>
+    <span id="env-badge" class="badge"></span>
+  </header>
+
+  <main>
+    <section class="card">
+      <h2>Add Student</h2>
+      <form id="student-form" class="form-row" novalidate>
+        <input id="student-name" type="text" placeholder="Full name, e.g. Chaitanya" maxlength="100" autocomplete="off" required />
+        <input id="student-id" type="text" inputmode="numeric" placeholder="Student ID, e.g. 105" maxlength="10" autocomplete="off" required />
+        <select id="student-status" aria-label="Student status">
+          <option selected>Pending</option>
+          <option>Enrolled</option>
+          <option>Graduated</option>
+        </select>
+        <button type="submit" id="student-btn">Add Student</button>
+      </form>
+      <p id="student-message" class="message" role="status"></p>
+    </section>
+
+    <section class="card">
+      <h2>Students</h2>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr><th>ID</th><th>Name</th><th>Status</th></tr>
+          </thead>
+          <tbody id="student-body"></tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>Add Task</h2>
+      <div class="form-row">
+        <input id="title" type="text" placeholder="Task title, e.g. Submit Cloud Computing Assignment" maxlength="200" />
+        <select id="priority">
+          <option>High</option>
+          <option selected>Medium</option>
+          <option>Low</option>
+        </select>
+        <select id="status">
+          <option selected>Pending</option>
+          <option>In Progress</option>
+          <option>Completed</option>
+        </select>
+        <button id="add-btn">Add Task</button>
+      </div>
+      <p id="message" class="message"></p>
+    </section>
+
+    <section class="stats" id="stats"></section>
+
+    <section class="card">
+      <div class="toolbar">
+        <h2>Tasks</h2>
+        <input id="search" type="search" placeholder="Search tasks..." />
+        <select id="filter">
+          <option value="">All statuses</option>
+          <option>Pending</option>
+          <option>In Progress</option>
+          <option>Completed</option>
+        </select>
+      </div>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr><th>ID</th><th>Task</th><th>Priority</th><th>Status</th><th>Created</th><th>Actions</th></tr>
+          </thead>
+          <tbody id="task-body"></tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+
+  <script src="/script.js"></script>
+</body>
+</html>
